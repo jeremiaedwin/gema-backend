@@ -1,0 +1,14 @@
+const express = require('express');
+const {addAdType, getAllAdType, getAdType, updateAdType, deleteAdType} = require('../controllers/adTypeControllers');
+
+const router = express.Router();
+
+router.post('/adType', addAdType);
+router.get('/adType', getAllAdType);
+router.get('/adType/:id', getAdType);
+router.put('/adType/:id', updateAdType);
+router.delete('/adType/:id', deleteAdType);
+
+module.exports = {
+    routes: router
+}
